@@ -6,3 +6,13 @@ export default function MealsPage({params}) {
     </div>
   );
 }
+
+// This function generates the static parameters for the dynamic route
+export async function generateStaticParams() {
+  // Replace this with your actual data fetching logic
+  const slugs = ['burger', 'pizza', 'curry', 'dumplings', 'macncheese'];
+
+  return slugs.map((slug) => ({
+    slug,
+  }));
+}
